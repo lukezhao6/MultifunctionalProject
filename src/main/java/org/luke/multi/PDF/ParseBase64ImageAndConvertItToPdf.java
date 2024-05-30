@@ -26,6 +26,30 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.List;
 
+// <dependency>
+// <groupId>com.itextpdf</groupId>
+// <artifactId>barcodes</artifactId>
+// <version>7.1.11</version>
+// <scope>compile</scope>
+// </dependency>
+// <dependency>
+// <groupId>com.itextpdf</groupId>
+// <artifactId>layout</artifactId>
+// <version>7.1.11</version>
+// <scope>compile</scope>
+// </dependency>
+// <dependency>
+// <groupId>org.jsoup</groupId>
+// <artifactId>jsoup</artifactId>
+// <version>1.13.1</version>
+// <scope>compile</scope>
+// </dependency>
+// <dependency>
+// <groupId>org.apache.poi</groupId>
+// <artifactId>poi-ooxml</artifactId>
+// <version>4.1.2</version>
+// <scope>compile</scope>
+// </dependency>
 @Component
 @Slf4j
 public class ParseBase64ImageAndConvertItToPdf {
