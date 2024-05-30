@@ -57,6 +57,8 @@ public class ParseBase64ImageAndConvertItToPdf {
                     // 从每个<img>元素的src属性中提取Base64编码的图像数据。
                     String base64Image = element.attr("src").split(",")[1];
                     // 将Base64编码的图像数据解码为字节数组，并添加到imageBytesList中。
+                    // java9以及之后的版本弃用，可以用byte[] imageByte =
+                    // Base64.getDecoder().decode(base64Image);替换
                     byte[] imageBytes = DatatypeConverter.parseBase64Binary(base64Image);
                     imageBytesList.add(imageBytes);
                 }
@@ -92,6 +94,7 @@ public class ParseBase64ImageAndConvertItToPdf {
                         pdfDoc.addNewPage(pageSize);
                         // 设置页面边距为0，并将图像添加到页面中。
                         doc.setMargins(0, 0, 0, 0);
+                        // 将一个字节数组（表示图像数据）转换为一个可以添加到 PDF 文档中的图像对象：
                         Image img = new Image(ImageDataFactory.create(imageBytes));
                         img.setHorizontalAlignment(HorizontalAlignment.CENTER);
                         doc.add(img);
