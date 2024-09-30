@@ -1,4 +1,4 @@
-package org.luke.multi;
+package org.luke.multi.test;
 
 import lombok.extern.slf4j.Slf4j;
 
